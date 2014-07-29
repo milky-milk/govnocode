@@ -1,0 +1,4 @@
+AddDefaultCharset UTF-8
+Order deny,allow
+Deny from all
+Allow from 192.168.1

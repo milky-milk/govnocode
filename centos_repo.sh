@@ -15,6 +15,8 @@ wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 rpm -ivh epel-release-6-8.noarch.rpm
 rpm --import http://rpms.famillecollet.com/RPM-GPG-KEY-remi
 rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+# Zabbix repostitory
+rpm -ivh http://repo.zabbix.com/zabbix/2.4/rhel/6/x86_64/zabbix-release-2.4-1.el6.noarch.rpm
 yum install -y yum-priorities
 
 sed -i '/enabled=1/a\priority=10\' /etc/yum.repos.d/epel.repo && sed -i '5c\enabled=1\' /etc/yum.repos.d/remi.repo && yum -y update
